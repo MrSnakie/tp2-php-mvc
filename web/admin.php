@@ -40,7 +40,7 @@ ob_start();
 if ($page==='home') { // Page 'home'
     require ROOT.'/pages/admin/index.php';
 
-# Autres pages
+# Clients
 }elseif($page==='clients.list'){
     require ROOT.'/pages/admin/clients/list.php';
 }elseif($page==='clients.status'){
@@ -49,6 +49,10 @@ if ($page==='home') { // Page 'home'
     require ROOT.'/pages/admin/clients/info.php';
 }elseif($page==='clients.add'){
     require ROOT.'/pages/admin/clients/add.php';
+
+# Crédits
+}elseif($page==='credits.list'){
+    require ROOT.'/pages/admin/credits/index.php';
 
 # Page d'erreur
 }else{ // Erreur 404
