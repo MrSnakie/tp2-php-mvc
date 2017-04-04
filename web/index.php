@@ -31,7 +31,7 @@ ob_start(); // On créer un cache
 
 # Page d'accueil
 if($page === 'home'){ // Si la variable 'page' est égale à 'home'
-	require ROOT.'/pages/users/home.php'; // Alors on fait appelle au fichier 'home.php'
+	require ROOT.'/pages/index.php'; // Alors on fait appelle au fichier 'home.php'
 }
 
 # Autres pages
