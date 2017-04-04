@@ -13,4 +13,10 @@ class ClientEntity extends Entity
     {
         return (int)((time()-strtotime($this->birth_date))/(60*60*24*365)).' ans';
     }
+
+    public function getBirthdatefr()
+    {
+        setlocale(LC_TIME, "fr_FR");
+        return strftime('%A %e %B %G',time($this->birth_date));
+    }
 }
