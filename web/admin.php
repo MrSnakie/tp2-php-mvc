@@ -53,6 +53,8 @@ if ($page==='home') { // Page 'home'
 # Crédits
 }elseif($page==='credits.list'){
     require ROOT.'/pages/admin/credits/index.php';
+}elseif($page==='credits.add'){
+    require ROOT.'/pages/admin/credits/add.php';
 
 # Page d'erreur
 }else{ // Erreur 404
