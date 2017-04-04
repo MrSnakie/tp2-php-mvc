@@ -35,7 +35,9 @@ if($page === 'home'){ // Si la variable 'page' est égale à 'home'
 }
 
 # Autres pages
-
+elseif($page==='clients.status'){
+	require ROOT.'/pages/clients/status.php';
+}
 
 # Espace admin
 elseif($page === 'Connexion'){ // Si la variable `page` est égale à `Connexion`

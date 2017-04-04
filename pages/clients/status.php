@@ -1,19 +1,26 @@
+<?php
+    if(!isset($_POST["id"])){
+        # message flash
+        header('location: index.php?p=home');
+    }
+?>
+
 <div class="row">
     <div class="col-md-9">
-        <h2>Liste des clients</h2>
+        <h2>Liste des utilisateurs</h2>
         <hr class="my-separator">
         <table class="col-md-12 table table-hover">
             <thead>
                 <tr>
-                    <th>Nom / Prénom</th>
+                    <th>Prénom / Nom</th>
                     <th>Âge</th>
                     <th>Adresse / Code postal</th>
                     <th>Téléphone</th>
-                    <th>Situation</th>
+                    <th>Service</th>
                 </tr>
             </thead>
             <tbody>
-                <?php foreach(App::getInstance()->getTable('client')->byStatutName() as $client): ?>
+                <?php foreach(App::getInstance()->getTable('client')->byStatusId($_POST['id']) as $client): ?>
                     <tr>
                         <td><?= $client->identity ?></td>
                         <td><?= $client->age ?></td>
@@ -32,11 +39,13 @@
         <form action="index.php?p=clients.status" method="post">
             <select class="form-control" name="id">
                 <?php foreach(App::getInstance()->getTable('marital_statu')->all() as $statut): ?>
-                    <option value="<?= $statut->id ?>"><?= $statut->status ?></option>
+                    <option value="<?= $statut->id ?>" <?= ($_POST['id']==$statut->id)?'selected="selected"' : ''?>>
+                        <?= $statut->status ?>
+                    </option>
                 <?php endforeach; ?>
             </select>
             </br>
             <input type="submit" class="btn btn-info size" value="Lancer le tri" />
         </form>
-    </div>
+    </div> 
 </div>
