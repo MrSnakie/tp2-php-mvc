@@ -6,5 +6,5 @@
 </div>
 
 <div class="row">
-	<!-- html comment -->
+	<p><a href="admin.php?p=clients.list" class="btn btn-info btn-lg size" role="button">Liste des clients</a></p>
 </div>

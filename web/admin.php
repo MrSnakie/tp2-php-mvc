@@ -40,6 +40,12 @@ ob_start();
 if ($page==='home') { // Page 'home'
     require ROOT.'/pages/admin/index.php';
 
+# Autres pages
+}elseif($page==='clients.list'){
+    require ROOT.'/pages/admin/clients/list.php';
+}elseif($page==='clients.status'){
+    require ROOT.'/pages/admin/clients/status.php';
+
 # Page d'erreur
 }else{ // Erreur 404
     require ROOT.'/pages/errors/404.php';
