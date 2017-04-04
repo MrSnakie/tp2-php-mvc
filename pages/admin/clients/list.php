@@ -10,6 +10,7 @@
                     <th>Adresse / Code postal</th>
                     <th>Téléphone</th>
                     <th>Situation</th>
+                    <th>Options</th>
                 </tr>
             </thead>
             <tbody>
@@ -20,6 +21,9 @@
                         <td><?= $client->adress .' - '. $client->postal_code ?></td>
                         <td><?= $client->phone ?></td>
                         <td><?= $client->statut ?></td>
+                        <td>
+                            <a class="btn btn-info btn-xs" href="admin.php?p=clients.info&id=<?= $client->id ?>">Détail</a>
+                        </td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

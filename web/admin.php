@@ -45,6 +45,8 @@ if ($page==='home') { // Page 'home'
     require ROOT.'/pages/admin/clients/list.php';
 }elseif($page==='clients.status'){
     require ROOT.'/pages/admin/clients/status.php';
+}elseif($page==='clients.info'){
+    require ROOT.'/pages/admin/clients/info.php';
 
 # Page d'erreur
 }else{ // Erreur 404
