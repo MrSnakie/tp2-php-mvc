@@ -1,3 +1,5 @@
 <div class="row">
-    <h3>Travaux en cours...</h3> 
+    <div class="col-md-12 alert alert-info">
+        <strong>Informations:</strong> il n'y a rien à voir ici, connectez vous en administrateur pour accéder à du contenu.
+    </div>
 </div>

@@ -36,7 +36,6 @@ if($page === 'home'){ // Si la variable 'page' est égale à 'home'
 
 # Autres pages
 
-
 # Espace admin
 elseif($page === 'Connexion'){ // Si la variable `page` est égale à `Connexion`
 	require ROOT.'/pages/admin_users/login.php'; // Alors on fait appelle au fichier `login.php`
