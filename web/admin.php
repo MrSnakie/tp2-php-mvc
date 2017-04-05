@@ -49,6 +49,8 @@ if ($page==='home') { // Page 'home'
     require ROOT.'/pages/admin/clients/info.php';
 }elseif($page==='clients.add'){
     require ROOT.'/pages/admin/clients/add.php';
+}elseif($page==='clients.delete'){
+    require ROOT.'/pages/admin/clients/delete.php';
 
 # Crédits
 }elseif($page==='credits.list'){

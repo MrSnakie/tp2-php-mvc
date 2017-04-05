@@ -23,6 +23,10 @@
                         <td><?= $client->statut ?></td>
                         <td>
                             <a class="btn btn-info btn-xs" href="admin.php?p=clients.info&id=<?= $client->id ?>">Détail</a>
+                            <form style="display: inline-block;" action="admin.php?p=clients.delete" method="post">
+                                <input type="hidden" name="id" value="<?= $client->id; ?>">
+                                <input type="submit" class="btn btn-xs btn-danger" name="OK" value="X">
+                            </form>
                         </td>
                     </tr>
                 <?php endforeach; ?>
